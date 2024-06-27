@@ -1,2 +1,2 @@
 # EternalReturn_PersonaMusic
-ペルソナ装備するとLastSurpriseが流れるプログラム
+ペルソナを装備するとLastSurpriseが流れるプログラム
