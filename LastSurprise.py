@@ -17,7 +17,7 @@ while(True):
     #OpenCVで画像部分一致を検索
     result = cv2.matchTemplate(image, template, cv2.TM_CCORR_NORMED)
 
-    # 最も類似度が高い位置と低い位置を取得します
+    # 最も類似度が高い位置と低い位置を取得
     minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
 
     #類似度が閾値を超えているか判定（上で作った関数を使用）
