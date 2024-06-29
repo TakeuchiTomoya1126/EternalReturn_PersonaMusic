@@ -1,6 +1,8 @@
 import cv2
 import time
+import pygame.mixer
 from PIL import ImageGrab
+
 def Judge_Matching(num):
     if 0.90 < num:
         return True
@@ -9,7 +11,8 @@ def Judge_Matching(num):
 
 
 template = cv2.imread('./persona.png') #検索元画像ファイルパスを指定
-
+pygame.mixer.init(frequency = 44100)
+pygame.mixer.music.load('LastSurprise.mp3')
 
 while(True):
     ImageGrab.grab().save('./persona2.png')
@@ -26,7 +29,9 @@ while(True):
     #結果を出力
     if Judg:
         print("true")
+        pygame.mixer.music.play(20)
     else:
         print("false")
+        pygame.mixer.music.stop()
     # （実行結果→）True or False
     time.sleep(1)
